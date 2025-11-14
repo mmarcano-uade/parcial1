@@ -39,7 +39,7 @@
           <a class="nav-pill nav-pill--active"  href="/contacto.html">Contacto</a>
         </nav>
         <div class="contact-form-main">
-            <form class="contact-form">
+            <form class="contact-form" id="contactForm">
               <div class="form-row">
                 <div class="form-group">
                   <label for="nombre">Nombre</label>
@@ -108,31 +108,30 @@
 
   <script>
         document.addEventListener("DOMContentLoaded", () => {
-          const formBtn = document.getElementById("formBtn")
-          console.log(formBtn)
-          formBtn.addEventListener("submit", (e) => {
+          const form= document.getElementById("contactForm")
+          console.log(form)
+          form.addEventListener("submit", (e) => {
             console.log("felll")
             event.preventDefault(); 
-
+            
             const lastname = document.getElementById("lastnameInput")
             const name = document.getElementById("nameInput")
             const message = document.getElementById("messageTextArea")
 
-            const errorName= document.getElementById("error-text-name")
-            const errorLastname= document.getElementById("error-text-lastname")
-            const errorMessage= document.getElementById("error-text-area")
-            errorName.classList.toggle("error_display")
-            errorLastname.classList.toggle("error_display")
-            errorMessage.classList.toggle("error_display")
-
-
-            if ( !name ){
+            const errorName = document.getElementById("error-text-name")
+            const errorLastname = document.getElementById("error-text-lastname")
+            const errorMessage = document.getElementById("error-text-area")
+        
+            errorName.classList.remove("error_display")
+            errorLastname.classList.remove("error_display")
+            errorMessage.classList.remove("error_display")
+            if ( !name.value ){
               errorName.classList.toggle("error_display")
             }
-            if ( !lastname ){
+            if ( !lastname.value ){
               errorLastname.classList.toggle("error_display")
             }
-             if ( !message ){
+             if ( !message.value ){
               errorMessage.classList.toggle("error_display")
             }
             
