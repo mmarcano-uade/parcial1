@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ficha Personal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+
+    <header class="page-header">
+      <div class="header-text">
+        <h1>Ficha Personal</h1>
+        <p>Perfil de Estudiante</p>
+      </div>
+      <button class="header-icon" id="darkmode">
+      </button>
+    </header>
+
+    <main class="page-main">
+      <section class="profile">
+
+        <div class="profile-top">
+          <div class="avatar-wrapper">
+            <img
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg"
+              alt="Foto de perfil"
+            />
+          </div>
+          <h2 class="profile-name">Manuel Marcano</h2>
+        </div>
+
+        <nav class="profile-nav">
+          <a class="nav-pill nav-pill--gradient" href="/index.html">HOME</a>
+          <a class="nav-pill nav-pill--gradient" target="_blank" href="https://mmarcano-uade.github.io/TiendaComponentesDePC/">Local Comerial</a>
+          <a class="nav-pill nav-pill--gradient"target="_blank" href="https://mmarcano-uade.github.io/tp1">Fan Page</a>
+          <a class="nav-pill nav-pill--active" href="/contacto.html">Contacto</a>
+        </nav>
+
+        <div class="profile-details">
+          <div class="detail-column">
+            <div class="detail-item">
+              <span class="detail-label">Nombre Completo</span>
+              <span class="detail-value">Manuel Jose Marcano Quijada</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Materia</span>
+              <span class="detail-value">Diseño y desarrollo web</span>
+            </div>
+          </div>
+
+          <div class="detail-column">
+            <div class="detail-item">
+              <span class="detail-label">Nro de Legajo</span>
+              <span class="detail-value">1229774</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Universidad</span>
+              <span class="detail-value">UADE</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <span>© 2025 Todos los derechos reservados</span>
+      <a href="https://github.com/mmarcano-uade/parcial1" class="github-btn" target="_blank" >
+        <span class="github-icon"></span>
+        <span>Ver en GitHub</span>
+      </a>
+    </footer>
+
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toggleBtn = document.getElementById("darkmode")
+
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark")
+        });
+
+    });
+  </script>
+</body>
+</html>
